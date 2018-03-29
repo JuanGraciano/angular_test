@@ -1,0 +1,23 @@
+<form>
+    <div>
+      <label>Nombre</label>
+      <input #nombre [(ngModel)]="user.nombre"  [ngModelOptions]="{standalone: true}" type="text" >
+    </div>
+    <div>
+      <label>Correo Eletronico</label>
+      <input #email [(ngModel)]="user.email"  [ngModelOptions]="{standalone: true}" type="text">
+    </div>
+    <div>
+        <label >Pagina Web</label>
+        <input #website  [(ngModel)]="user.website"  [ngModelOptions]="{standalone: true}" type="text"  >
+    </div>
+    <div>
+        <label >Comentario</label>
+        <textarea #comentario [(ngModel)]="user.comentario"  [ngModelOptions]="{standalone: true}" name="Text1" cols="40" rows="5"></textarea>
+    </div>
+    <div>
+      <button routerLink="/home" (click) = "updateUser(user)">Guardar</button>
+      <button routerLink="/home">Regresar</button> 
+    </div>
+  
+  </form>

@@ -1,0 +1,42 @@
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    margin: 0;
+    background-color: #0d0d0d;
+    text-align: center;
+    color:white;
+}
+
+.footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    /*overflow: hidden;*/
+}
+
+.footer ul > li {
+    display: inline-block;
+}
+
+.footer ul > li > a {
+    display: block;
+    color: #cccccc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer ul > li > a:hover:not(.active) {
+    background-color: #111;
+}
+
+@media screen and (max-width: 600px) {
+    .footer ul > li {
+         float: none;
+         display: block;
+    }
+}

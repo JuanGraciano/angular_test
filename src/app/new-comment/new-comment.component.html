@@ -1,0 +1,25 @@
+<form>
+    <div>
+      <label>Nombre</label>
+      <input #nombre type="text" >
+    </div>
+    <div>
+      <label>Correo Eletronico</label>
+      <input #email type="text">
+    </div>
+    <div>
+        <label >Pagina Web</label>
+        <input #website type="text"  >
+    </div>
+    <div>
+        <label >Comentario</label>
+        <textarea #comentario name="Text1" cols="40" rows="5"></textarea>
+    </div>
+    <div>
+      <button routerLink="/home" (click) = "createUser(nombre.value, email.value, website.value, comentario.value)" >Guardar</button>
+      <button routerLink="/home">
+        Regresar   
+      </button> 
+    </div>
+  
+  </form> 

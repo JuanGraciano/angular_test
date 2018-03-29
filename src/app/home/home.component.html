@@ -1,0 +1,39 @@
+<div>
+    <button routerLink="/newComment">
+        Agregar Comentario
+    </button>
+</div>
+<div>
+    <app-user-list [users]="users$ | async" (onCreateUser)="createUser($event)"></app-user-list>
+</div>
+
+
+<!-- <table>
+    <tr>
+        <th>
+            <a href="" (click)="sortArray('name', $event)">Nombre</a>
+        </th>
+        <th>
+            <a href="" (click)="sortArray('email', $event)">Email</a>
+        </th>
+        <th>
+            <a href="" (click)="sortArray('website', $event)">Website</a>
+        </th>
+        <th>Accion</th>
+    </tr>
+    <tr *ngFor="let user of users | filter : 'name' : searchString; let i = index">
+        <td>
+            {{user.name}}
+        </td>
+        <td>
+            {{user.email}}
+        </td>
+        <td>
+            {{user.website}}
+        </td>
+        <td>
+            <button (click)="userSelected.emit(user)">Editar</button>
+        </td>
+    </tr>
+</table> -->
+

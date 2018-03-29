@@ -1,0 +1,32 @@
+
+<br>
+
+<input [(ngModel)]="filterText" placeholder="search text goes here">
+
+<table>
+  <thead>
+    <tr>
+      <th>
+          <!-- <a href="" (click)="sortArray('name', $event)">Nombre</a> -->
+          <a href="">Nombre</a>
+      </th>
+      <th>
+          <a href="">E-mail</a>
+      </th>
+      <th>
+          <a href="">Website</a>
+      </th>
+      <th>
+          Accion
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users | filter: filterText">
+      <td>{{ user.nombre }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.website }}</td>
+      <td><button routerLink="/editComment" (click)="setActualUser(user)" >Editar</button></td>
+    </tr>
+  </tbody>
+</table>
